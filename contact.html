@@ -1,0 +1,39 @@
+<head>
+  <link rel="stylesheet" href="./public/assets/contactstyle.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="container">
+    <div class="content">
+      <div class="title">
+        <h1>Contact Me</h1>
+      </div>
+
+      <hr>
+
+      <div class="contact">
+        <p>Phone number: <u>+40783290021</u></p>
+        <p>Email: <u>oana.af@yahoo.com</u></p>
+        <p>Address: <u>Cluj-Napoca, Romania</u><br /></p>
+      </div>
+    </div>
+    <div class="vertical-line"></div>
+  </div>
+
+  <script>
+    function includeHTML() {
+      let element = document.getElementById('navbar-placeholder');
+      let xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          element.innerHTML = this.responseText;
+        }
+      };
+      xhr.open('GET', 'navbar.html', true);
+      xhr.send();
+    }
+
+    // Apelează funcția pentru a include navbar-ul
+    includeHTML();
+  </script>
+</body>

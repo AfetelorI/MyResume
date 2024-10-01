@@ -1,0 +1,96 @@
+
+
+<head>
+  <link rel="stylesheet" href="./public/assets/workstyle.css">
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <h1>My first project</h1>
+  
+  <!-- Container pentru videoclip și caseta de text -->
+  <div class="container">
+    <video src="/public/LicentaPrezentare.mp4" class="custom-video" width="600px" height="350px" controls poster="poster.png"></video>
+    
+    <!-- Caseta de text lângă videoclip -->
+    <div class="custom-text">
+      <p>This license project represents a web application for managing the services of a cafe. The application allows the management of orders, menus and reservations for the smooth operation of the cafe. Main functionalities include: user registration and authentication, menu viewing, online ordering, reservation management and inventory monitoring. <br>
+       <br> The application is built on an architecture that clearly separates responsibilities between front-end and back-end. The back-end was developed using ASP.NET Core in the Visual Studio development environment. For the database, PostgreSQL was used, which facilitates the storage and manipulation of the application's essential data. On the front-end, HTML, CSS and JavaScript were used to create an easy-to-use interface.</p>
+    </div>
+  </div>
+
+  <div class="space">
+
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="./public/photos/poza1for .png" alt="Description 1">
+      <div class="description">Shopping page</div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="./public/photos/poza2for.png" alt="Description 2">
+      <div class="description">Shopping Cart</div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="./public/photos/poza3for.png" alt="Description 3">
+      <div class="description">Register page</div>
+    </div>
+  </div>
+
+  <div class="space">
+
+  </div>
+
+  <div class="cards-container">
+    <!-- Primul card -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          What type of IDE was used?
+        </div>
+        <div class="flip-card-back">
+          <p>Visual Studio was used to create this project because it presents:  </p>
+          <ul>
+            <li>extensive development tools</li>
+            <li>interactive debugging</li>
+            <li>intelligent code suggestions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Al doilea card -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          What payment management platform was used?
+        </div>
+        <div class="flip-card-back">
+          <p>Stripe was used because of its many features:</p>
+          <ul>
+            <li>divers payment options</li>
+            <li>user-friendly interface</li>
+            <li>robust security</li>
+            <li>comprehensive guides</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function includeHTML() {
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.log('Error loading navbar:', error));
+    }
+    
+    includeHTML();
+    </script>
+</body>

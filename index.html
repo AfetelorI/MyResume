@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="./public/assets/style.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <div class="first-row">
+    <div class="img">
+      <img src="./me.jpg" alt="Profile Photo"/>
+    </div>
+    <div class="text-content">
+      <div class="hello">Hi! I'm Ioana</div>
+      <p>I graduated from the Technical University of Cluj-Napoca, Faculty of Electronics, Telecommunications, and Information Technology, and I'm excited to start my career in programming. I've gained strong problem-solving skills through my studies and projects, and I'm eager to contribute to a team where I can learn and grow.</p></p>
+    </div>
+  </div>
+  
+  <hr />
+  <div class="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Technical University of Cluj-Napoca Faculty of Electronics, Telecommunications and Information Technology <br> 10/2020 - 09/2024 </li>
+      <li>Colegiul Național "Ștefan cel Mare", Tg-Neamț <br>09/2016 - 07/2020</li> 
+    </ul>
+  </div>
+  <hr />
+  <div class="work">
+    <h2>Work Experience</h2>
+    <p>Summer Practice Bootcamp - Endava <br> 07/2023 - 09/2023</p> <br>
+    <p class="summer">During the summer of 2023, I had the opportunity to
+        work with several mentors on an application called
+        Ticket Management System. In this role, my
+        responsibilities included acquiring skills and
+        contributing to backend, frontend, and database
+        development. We applied several Agile methodologies and used
+        multiple frameworks and programming languages, including Java with Spring Boot, C# with .NET, JavaScript, HTML, and CSS.
+    </p>
+ </div>
+  <hr />
+  <div class="content-container">
+    <!-- Partea stanga -->
+    <div class="skills-section">
+      <h2>Skills</h2>
+      <p>Both in Summer Practice Bootcamp and in College I had the opportunity of learning numerous programming languages, such as:</p>
+      <ol>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java</li>
+        <li>C/C++</li>
+        <li>C#</li>
+      </ol>
+    </div>
+  
+    <div class="content-container">
+      <!-- Titlul și săgeata pentru My Hobbies -->
+      <div class="hobbies-title">
+        <h2>My Hobbies</h2>
+        <span class="arrow">→</span>
+      </div>
+    
+      <!-- Containerul pentru card -->
+      <div class="card-container">
+        <div class="card-content">
+          <ul>
+            <li>Sport</li>
+            <li>Drinking coffee:)</li>
+            <li>Reading</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+ 
+
+<hr>
+<footer>
+  <small>Afetelor Ioana</small>
+  <small>© 2024 Udemy</small>
+</footer>
+<script>
+function includeHTML() {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.log('Error loading navbar:', error));
+}
+
+includeHTML();
+</script>
+</body>
+</html>
